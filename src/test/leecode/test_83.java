@@ -1,0 +1,39 @@
+package test.leecode;
+
+import test.leecode.model.Node;
+
+/**
+     给定一个排序链表，删除所有重复的元素，使得每个元素只出现一次。
+
+     示例 1:
+
+     输入: 1->1->2
+     输出: 1->2
+     示例 2:
+
+     输入: 1->1->2->3->3
+     输出: 1->2->3
+ */
+public class test_83 {
+
+    public static final void deleteDup(Node node){
+
+        Node current = node;
+
+        while(current != null && current.next != null){
+            if(current.value == current.next.value){
+                current.next = current.next.next;
+            }
+
+            current = current.next;
+        }
+
+        node.print(null);
+
+    }
+
+    public static void main(String[] args) {
+        Node node = Node.create(new int[]{1, 1, 2, 3, 3});
+        deleteDup(node);
+    }
+}
