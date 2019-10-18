@@ -85,7 +85,7 @@ public class TreeNode {
             return;
         }
 
-        System.out.print(node.value);
+        System.out.print(node.value + ",");
 
         visitTree(node.left);
         visitTree(node.right);
