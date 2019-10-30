@@ -37,7 +37,7 @@ public class test_26 {
 
     public static void main(String[] args) {
 
-        int[] array = new int[]{1, 1, 2};
+        int[] array = new int[]{1, 3, 2};
         int ret = removeDuplicate(array);
         System.out.println(ret);
         for(int i : array){

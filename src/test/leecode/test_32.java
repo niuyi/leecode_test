@@ -24,7 +24,7 @@ public class test_32 {
     public static final int findCount(String str){
         int leftCount = 0;
         int rightCount = 0;
-        int leftIndex = -1;
+//        int leftIndex = -1;
         int maxCount = 0;
 
         TreeSet<Integer> max = new TreeSet<>();
@@ -36,9 +36,9 @@ public class test_32 {
 
             if(c == '('){
                 leftCount++;
-                if(leftIndex == -1){
-                    leftIndex = i;
-                }
+//                if(leftIndex == -1){
+//                    leftIndex = i;
+//                }
             }
 
             if(c == ')'){
@@ -55,7 +55,7 @@ public class test_32 {
                 }else if(rightCount > leftCount){
                     max.add(maxCount);
                     maxCount = 0;
-                    leftIndex = -1;
+//                    leftIndex = -1;
                     leftCount = 0;
                     rightCount = 0;
                 }
@@ -66,6 +66,7 @@ public class test_32 {
     }
 
     public static void main(String[] args) {
+        System.out.println(findCount("(())"));
         System.out.println(findCount("(()"));
         System.out.println(findCount(")()())"));
         System.out.println(findCount("()())()()()()"));
